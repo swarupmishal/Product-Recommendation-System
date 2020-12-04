@@ -1,9 +1,11 @@
 # Product-Recommendation-System
-![alt text](https://github.com/swarupmishal/Product-Recommendation-System/blob/main/extras/preview1529724459413.png)
+![alt text](https://github.com/swarupmishal/Product-Recommendation-System/blob/main/extras/overview.png)
 
-Built a Product Recommendation System using historical order logs of a retail store. The data was generated on EC2 instance where Kinesis agent was installed, and published through Kinesis data firehose into an Amazon S3 data lake. The file "log_generator" was used for this purpose. An Elastic MapReduce (EMR) cluster was spinned up to pick up these files from the S3 data lake. An Apache Spark MLlib job was running on the EMR cluster to produce a recommendations model. Please take a peak at the code "als_product_recommendation.py" which performs this task. The ML job predicted what items the customers would like to buy based on the collaborative filtering model.
+## Architecture:
+![alt text](https://github.com/swarupmishal/Product-Recommendation-System/blob/main/extras/architecture.png)
+Built a Product Recommendation System using historical order logs of an online retail store. The data was generated on EC2 instance where Kinesis agent was installed, and published through Kinesis data firehose into an Amazon S3 data lake. The file "log_generator" was used for this purpose. An Elastic MapReduce (EMR) cluster was spinned up to pick up these files from the S3 data lake. An Apache Spark MLlib job was running on the EMR cluster to produce a recommendations model. Please take a peak at the code "als_product_recommendation.py" which performs this task. The ML job predicted what items the customers would like to buy based on the collaborative filtering model.
 
-## What exactly the Data is?
+## Data:
 The data is from a UK retailer that sells crafty goods available in the public domain. Its an ecommerce dataset with real world problems.
 
 ### Environment: 
